@@ -16,23 +16,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |   =    |   1  |   2  |   3  |   4  |   5  | LEFT |           | RIGHT|   6  |   7  |   8  |   9  |   0  |   -    |
+ * |  Esc   |   1  |   2  |   3  |   4  |   5  | Light|           |Sleep |   6  |   7  |   8  |   9  |   0  |   \|   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Del    |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |   P  |   \    |
+ * |  Tab   |   Q  |   W  |   E  |   R  |   T  |  {[  |           |  }]  |   Y  |   U  |   I  |   O  |   P  |   =+   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | BkSp   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |; / L2|' / Cmd |
- * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
- * | LShift |Z/Ctrl|   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |//Ctrl| RShift |
+ * |  Caps  |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |      |   -_   |
+ * |--------+------+------+------+------+------|  (   |           |   )  |------+------+------+------+------+--------|
+ * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |  ,;  |  .:  |  Up  |   /?   |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |Grv/L1|  '"  |AltShf| Left | Right|                                       |  Up  | Down |   [  |   ]  | ~L1  |
- *   `----------------------------------'                                       `----------------------------------'
- *                                        ,-------------.       ,-------------.
- *                                        | App  | LGui |       | Alt  |Ctrl/Esc|
- *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      | Home |       | PgUp |        |      |
- *                                 | Space|Backsp|------|       |------|  Tab   |Enter |
- *                                 |      |ace   | End  |       | PgDn |        |      |
- *                                 `--------------------'       `----------------------'
+ *  | LCtrl | L OS |AltShf| LAlt |  <>  |                                       |  '@  | RAlt | Left | Down | Right |
+ *  `-----------------------------------'                                       `-----------------------------------'
+ *                                       ,--------------.       ,-------------.
+ *                                       | BkSpa | Del  |       | Home |  End  |
+ *                               ,-------|-------|------|       |------+-------+-------.
+ *                               |       |       | PrSc |       | PgUp |       |       |
+ *                               | Space | Layer |------|       |------| Layer | Enter |
+ *                               |       |   1   | Ins  |       | PgDn |   2   |       |
+ *                               `----------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
@@ -40,14 +40,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         KC_ESC,    KC_1,    FR_EACU, KC_3,     KC_4,    IT_5,   BL_TOGG,
         KC_TAB,    KC_Q,    KC_W,    KC_E,     KC_R,    KC_T,   KC_LBRC,
-        KC_NO,     KC_A,    KC_S,    KC_D,     KC_F,    KC_G,
+        KC_CAPS,   KC_A,    KC_S,    KC_D,     KC_F,    KC_G,
         KC_LSFT,   KC_Z,    KC_X,    KC_C,     KC_V,    KC_B,   KC_LPRN,
         KC_LCTL,   KC_LGUI, KC_APP,  KC_LALT,  IT_LABK,
                                                KC_BSPC,         KC_DEL,
-                                                                KC_CAPS,
+                                                                KC_PSCR,
                                                KC_SPC,  MO(1),  KC_INS,
         // right hand
-        KC_PSCR,   IT_6,    FR_EGRV,  KC_8,    FR_CCED, FR_AGRV, KC_BSLS,
+        KC_SLEP,   IT_6,    FR_EGRV,  KC_8,    FR_CCED, FR_AGRV, KC_BSLS,
         KC_RBRC,   KC_Y,    KC_U,     KC_I,    KC_O,    KC_P,    KC_EQL,
                    KC_H,    KC_J,     KC_K,    KC_L,    KC_NO,   KC_MINS,
         KC_RPRN,   KC_N,    KC_M,     IT_COMM, IT_DOT,  KC_UP,   KC_SLSH,

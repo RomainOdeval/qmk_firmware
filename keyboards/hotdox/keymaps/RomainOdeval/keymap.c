@@ -150,12 +150,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *  | LCtrl | L OS |AltShf| LAlt |  <>  |                                       | ' "  | RAlt | Left | Down | Right |
  *  `-----------------------------------'                                       `-----------------------------------'
- *                                       ,--------------.       ,-------------.
- *                                       | BkSpa | Del  |       | Home |  End  |
+ *                                       ,--------------.       ,--------------.
+ *                                       |  Home | End  |       | Del  | BkSpa |
  *                               ,-------|-------|------|       |------+-------+-------.
- *                               |       |       | PrSc |       | PgUp |       |       |
+ *                               |       |       | PgUp |       | PrSc |       |       |
  *                               | Space | Layer |------|       |------| Layer | Enter |
- *                               |       |   1   | Ins  |       | PgDn |   2   |       |
+ *                               |       |   1   | PgDn |       | Ins  |   2   |       |
  *                               `----------------------'       `----------------------'
  */
 [BASE] = LAYOUT_ergodox(  // layer 0 : default
@@ -165,18 +165,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_CAPS, KC_A,               KC_S,              KC_D,             KC_F,               KC_G,
         KC_LSFT, KC_Z,               KC_X,              KC_C,             KC_V,               KC_B,                XP(PARENTH_L,AND),
         KC_LCTL, KC_LGUI,            KC_APP,            KC_LALT,          KC_LABK,
-                                                                                              KC_BSPC,             KC_DEL,
-                                                                                                                   KC_PSCR,
-                                                                          KC_SPC,             MO(1),               KC_INS,
+                                                                                              KC_HOME,             KC_END,
+                                                                                                                   KC_PGUP,
+                                                                          KC_SPC,             MO(1),               KC_PGDN,
         // right hand
         KC_SLEP,          XP(DIGIT_6,A_GRV), XP(DIGIT_7,E_AIG), XP(DIGIT_8,E_GRV), XP(DIGIT_9,C_CEDIL),    XP(DIGIT_0,U_GRAV), KC_BSLS,
-        KC_RBRC,          KC_Y,              KC_U,              KC_I,              KC_O,          KC_P,    KC_EQL,
-                          KC_H,              KC_J,              KC_K,              KC_L,          KC_NO,   KC_MINS,
-        XP(PARENTH_R,AT), KC_N,              KC_M,              XP(COMMA,SEMICLN), XP(DOT,COLON), KC_UP,   KC_SLSH,
-                                             XP(APOSTR,QUOT),   KC_RALT,           KC_LEFT,       KC_DOWN, KC_RGHT,
-        KC_HOME,                             KC_END,
-        KC_PGUP,
-        KC_PGDN,          MO(2),   KC_ENT
+        KC_RBRC,          KC_Y,              KC_U,              KC_I,              KC_O,                   KC_P,               KC_EQL,
+                          KC_H,              KC_J,              KC_K,              KC_L,                   KC_NO,              KC_MINS,
+        XP(PARENTH_R,AT), KC_N,              KC_M,              XP(COMMA,SEMICLN), XP(DOT,COLON),          KC_UP,              KC_SLSH,
+                                             XP(APOSTR,QUOT),   KC_RALT,           KC_LEFT,                KC_DOWN,            KC_RGHT,
+        KC_DEL,                              KC_BSPC,
+        KC_PSCR,
+        KC_INS,           MO(2),             KC_ENT
     ),
 /* Keymap 1: Symbol Layer
  *
